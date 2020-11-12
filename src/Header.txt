@@ -1,0 +1,99 @@
+import React from "react";
+import "./Header.css";
+import { Link } from "react-router-dom";
+import "./HeaderEvents.js";
+function Header() {
+  const user = null;
+  return (
+    <div className="header">
+      <Link to="/">
+        <div className="header_title" id="tempId">E4A</div>
+      </Link>
+      <div className="sp1"></div>
+      <div className="header_nav">
+        <Link to="/login">
+          <div className="header_option">
+            {!user ? "Login/Register" : user.email}
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
+import React, {useRef} from "react";
+import "./Home.css";
+import Product from "./Product";
+import udio1 from './assets/Density.mp3'
+import udio2 from './assets/Pollination.mp3'
+import udio3 from './assets/Periodic.mp3'
+
+function Home() {
+  const subject11 = useRef(null)
+  const subject21 = useRef(null)
+  const subject31 = useRef(null)
+  const audio1 = new Audio(udio1);
+  const audio2 = new Audio(udio2);
+  const audio3 = new Audio(udio3);
+  const speak1 = () => {
+    audio1.play();
+  }
+  const dontspeak1 = () => {
+    audio1.pause();
+  }
+const speak2 = () => {
+    audio2.play();
+  }
+  const dontspeak2 = () => {
+    audio2.pause();
+  }
+  const speak3 = () => {
+    audio3.play();
+  }
+  const dontspeak3 = () => {
+    audio3.pause();
+  }
+  return (
+    <div className="home">
+      <div className="home_container">
+        <div className="home_row">
+          <div className = "subject11" ref={subject11} onMouseEnter={() => speak1()} onMouseLeave={() => dontspeak1()}><Product
+            link="/Subject1"
+            title="Density"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.iBpQSvdrogG_wytHBuUsBAHaHa%26pid%3DApi&f=1"
+          /></div>
+        
+        <div className = "subject21" ref={subject21} onMouseEnter={() => speak2()} onMouseLeave={() => dontspeak2()}><Product
+          link="/Subject2"
+            title="Pollination"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.pp-Nzyom59jjpd50HAvjFwHaEw%26pid%3DApi&f=1"
+          /></div>
+          <div className = "subject31" ref={subject31} onMouseEnter={() => speak3()} onMouseLeave={() => dontspeak3()}><Product
+          link="/Subject3"
+            title="Periodic Table"
+            image="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/1080_SS_periodic_table_0.png"
+          /></div>
+          
+        </div>
+        <div className="home_row">
+          <Product
+          link="/Subject1"
+            title="About us"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YJhSwDRWCpsUrgiQyREqRAHaFO%26pid%3DApi&f=1"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
+
+<div className="home_row">
+          <Product
+          link="/Subject1"
+            title="About us"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YJhSwDRWCpsUrgiQyREqRAHaFO%26pid%3DApi&f=1"
+          />
+        </div>
