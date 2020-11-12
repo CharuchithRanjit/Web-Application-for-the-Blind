@@ -1,3 +1,6 @@
+This is a simple React web application. There are 3 courses available that can be selected from home page. Items in the page can be heard by hovering on them. Also, instructions are given out in the start.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
