@@ -1,4 +1,7 @@
-This is a simple React web application. There are 3 courses available that can be selected from home page. Items in the page can be heard by hovering on them. Also, instructions are given out in the start.
+## Web Application for the blind
+
+This is a React web application. There are 3 courses available that can be selected from home page. Items in the page can be heard by hovering on them. Also, instructions are given out in the start.
+Meant for blind students. Reads out the text, so the students dont have to see.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
